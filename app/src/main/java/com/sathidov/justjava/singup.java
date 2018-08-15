@@ -43,6 +43,7 @@ static String txtuser;
            ilogin.putExtra("test","123");
             startActivity(ilogin);
             Toast.makeText(this, "you became a member", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
 

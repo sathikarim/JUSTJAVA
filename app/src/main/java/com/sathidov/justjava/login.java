@@ -65,6 +65,8 @@ public class login extends AppCompatActivity {
                 i.putExtra("nameacc",memuser);
                 startActivity(i);
                 t=1;
+                finish();
+
             }
         }
                  // if not found member go to page justjava
