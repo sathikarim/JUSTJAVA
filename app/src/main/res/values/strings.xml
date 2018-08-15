@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">JUST JAVA</string>
+    <string name="enter_your_name">ENTER YOUR NAME</string>
+    <string name="coffee">COFFEE</string>
+    <string name="tea">TEA</string>
+    <string name="cappuccino">CAPPUCCINO</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="milk">Milk</string>
+    <string name="limon">Limon</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="price">PRICE</string>
+    <string name="order">ORDER</string>
+    <string name="coffejava">COFFEE :</string>
+    <string name="cupjava">  cup  </string>
+    <string name="wctjava">Whipped Cream : true</string>
+    <string name="wcfjava">Whipped Cream : fulse</string>
+    <string name="choco_tjava">Chocolate : true</string>
+    <string name="choco_fjava">Chocolate : fulse</string>
+    <string name="teajava">TEA :</string>
+    <string name="milk_tjava">Milk : true</string>
+    <string name="milk_fjava">Milk : fulse</string>
+    <string name="limon_tjava">Limon : true</string>
+    <string name="limon_fjava">Limon : fulse</string>
+    <string name="cappjava">CAPPUCCINO :</string>
+    <string name="vanilla_tjava">Vanilla : true</string>
+    <string name="vanilla_fjava">Vanilla : fulse</string>
+    <string name="totaljava">TOTAL= </string>
+    <string name="thnxjava">THANK YOU !</string>
+    <string name="namejava">NAME :</string>
+    <string name="maxcupjava">This is the maximum quantity</string>
+    <string name="mincupjava">possible</string>
+    <string name="zerototal">Please bought something</string>
+    <string name="summary">ORDER SUMMARY</string>
+
+    <string name="title_activity_splashwhats_app">splashwhats_app</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

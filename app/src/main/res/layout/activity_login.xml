@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0eada"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/icon24" />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cofcolor"
+        android:padding="16dp"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/acclogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/acon"
+            android:drawablePadding="16dp"
+            android:hint="UESRNAME or EMAIL"
+            android:maxLines="1"
+            android:ems="10"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/passlogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="16dp"
+            android:hint="PASSWORD"
+            android:maxLines="1"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColorHint="@android:color/black" />
+        <TextView
+            android:id="@+id/forgt"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="forgot your passwoot?"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="#FFA1514A"
+            android:text="LOGIN"
+            android:onClick="login"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFD28F50"
+            android:text="SINGUP"
+            android:onClick="sii"
+           />
+
+
+    </LinearLayout>
+
+</LinearLayout>

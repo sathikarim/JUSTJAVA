@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">جافا فقط</string>
+    <string name="enter_your_name">ادخل اسمك</string>
+    <string name="coffee">قهوة</string>
+    <string name="tea">شاي</string>
+    <string name="cappuccino">كابتشينو</string>
+    <string name="whipped_cream">كريمة</string>
+    <string name="chocolate">شكولاطة</string>
+    <string name="milk">حليب</string>
+    <string name="limon">ليمون</string>
+    <string name="vanilla">فانيلا</string>
+    <string name="price">السعر</string>
+    <string name="order">طلب</string>
+    <string name="coffejava">"قهوة : "</string>
+    <string name="cupjava">"  كوب  "</string>
+    <string name="wctjava">كريمة : نعم</string>
+    <string name="wcfjava">"كريمة : لا "</string>
+    <string name="choco_tjava">"شكولاطة : نعم "</string>
+    <string name="choco_fjava">"شكولاطة : لا "</string>
+    <string name="teajava">"شاي : "</string>
+    <string name="milk_tjava">"حليب : نعم "</string>
+    <string name="milk_fjava">"حليب : لا  "</string>
+    <string name="limon_tjava">"ليمون : نعم "</string>
+    <string name="limon_fjava">"ليمون : لا  "</string>
+    <string name="cappjava">كابتشينو : </string>
+    <string name="vanilla_tjava">"فانيلا : نعم "</string>
+    <string name="vanilla_fjava">"فانيلا : لا "</string>
+    <string name="totaljava">"المجموع = "</string>
+    <string name="thnxjava">" شكرا !"</string>
+    <string name="namejava">الاسم :</string>
+    <string name="maxcupjava">هذه اقصى كمية</string>
+    <string name="mincupjava">غير ممكن</string>
+    <string name="zerototal">من فضلك اشترى شيء ما</string>
+    <string name="summary">ملخص الطلب</string>
+</resources>

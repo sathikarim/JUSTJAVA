@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:background="#decbbb"
+        android:gravity="center_vertical"
+         />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/coffee" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/coffee"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <View style="@style/Divider"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/tea" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tea"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <View style="@style/Divider"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/capp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cappuccino"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <View style="@style/Divider"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:onClick="pluscoffee"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/numbercoffee"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:text="0" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:onClick="minescoffee"
+                android:text="-" />
+            <View style="@style/Divider"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:onClick="plustea"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/numbertea"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:onClick="minestea"
+                android:text="-" />
+            <View style="@style/Divider"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:onClick="pluscapp"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/numbercapp"
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="0dp"
+
+                android:layout_weight="1.2"
+                android:onClick="minescapp"
+                android:text="-" />
+            <View style="@style/Divider"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/CB_WhippedCream_coffee"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/whipped_cream" />
+
+            <CheckBox
+                android:id="@+id/CB_chocolate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/chocolate" />
+
+            <View style="@style/Divider"/>
+
+            <CheckBox
+                android:id="@+id/CB_milk"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/milk" />
+
+            <CheckBox
+                android:id="@+id/CB_limon"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/limon" />
+
+            <View style="@style/Divider"/>
+            <CheckBox
+                android:id="@+id/CB_WhippedCream_capp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/whipped_cream" />
+
+            <CheckBox
+                android:id="@+id/CB_vanilla"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="@string/vanilla" />
+
+            <View style="@style/Divider"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:text="@string/price"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#34168f"
+        android:textStyle="bold"
+        tools:text="100 da" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:onClick="oreder"
+        android:text="@string/order" />
+
+
+</LinearLayout>
