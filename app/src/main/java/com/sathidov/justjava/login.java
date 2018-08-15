@@ -23,18 +23,21 @@ public class login extends AppCompatActivity {
         //add member sathi karim
         whomember.add(new member("justjava@mail.com", "Sathi Karim", "2018"));
         //get info member from page singup
-        Intent data=getIntent();
-        String a=data.getStringExtra("a");
-        String b=data.getStringExtra("b");
-        String c=data.getStringExtra("c");
+        Intent data=this.getIntent();
+        String a=data.getStringExtra("test");
+        if ("123".equals(a)){
+           whomember = data.getParcelableArrayListExtra("array3");
+        }
+
         //add member  from page singup
-        whomember.add(new member(a,b,c));
+       // whomember.add(new member(a,b,c));
         TextView forgttxt=findViewById(R.id.forgt);
         //intent form login app to forgot app
         forgttxt.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
                                             Intent inta = new Intent(login.this, forg.class);
+                                            inta.putParcelableArrayListExtra("array1",whomember);
                                             startActivity(inta);
                                         }
                                     }
@@ -73,6 +76,7 @@ public class login extends AppCompatActivity {
 //when click singup
     public void sii(View view) {
         Intent i = new Intent(login.this, singup.class);
+        i.putParcelableArrayListExtra("array2",whomember);
         startActivity(i);
     }
 }

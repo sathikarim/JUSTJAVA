@@ -20,14 +20,8 @@ String emailforgtxt;
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forg);
-        memberforg.add(new member("justjava@mail.com", "Sathi Karim", "2018"));
-        // get data from page singup
-        String a=singup.geta();
-        String b=singup.getb();
-        String c=singup.getc();
-        if (!a.equals("") || !b.equals("") || c.equals("")) {
-            memberforg.add(new member(a,b,c));
-        }
+        Intent i=this.getIntent();
+        memberforg= i.getParcelableArrayListExtra("array1");
 
     }
 
