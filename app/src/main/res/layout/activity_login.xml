@@ -36,7 +36,7 @@
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/acon"
             android:drawablePadding="16dp"
-            android:hint="UESRNAME or EMAIL"
+            android:hint="@string/uesrname_or_email"
             android:maxLines="1"
             android:ems="10"
             android:textColorHint="@android:color/black" />
@@ -48,7 +48,7 @@
             android:layout_marginTop="16dp"
             android:drawableLeft="@drawable/lock"
             android:drawablePadding="16dp"
-            android:hint="PASSWORD"
+            android:hint="@string/password"
             android:maxLines="1"
             android:ems="10"
             android:inputType="textPassword"
@@ -60,14 +60,14 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:text="forgot your passwoot?"/>
+            android:text="@string/forgot_your_passwoot"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
             android:background="#FFA1514A"
-            android:text="LOGIN"
+            android:text="@string/login"
             android:onClick="login"/>
 
         <Button
@@ -75,7 +75,7 @@
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
             android:background="#FFD28F50"
-            android:text="SINGUP"
+            android:text="@string/singup"
             android:onClick="sii"
            />
 

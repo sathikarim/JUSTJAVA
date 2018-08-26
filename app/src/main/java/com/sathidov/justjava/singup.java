@@ -34,7 +34,7 @@ static String txtuser;
 
         txtpassword=singpassword.getText().toString();
         if (txtemail.equals("")||txtpassword.equals("")||txtuser.equals("")){
-            Toast.makeText(this, "OOOPS ...you wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.wrong, Toast.LENGTH_SHORT).show();
 
         }else{
             nawmember.add(new member(txtemail,txtuser,txtpassword));
@@ -42,7 +42,7 @@ static String txtuser;
             ilogin.putParcelableArrayListExtra("array3",nawmember);
            ilogin.putExtra("test","123");
             startActivity(ilogin);
-            Toast.makeText(this, "you became a member", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.newmember, Toast.LENGTH_SHORT).show();
             finish();
         }
 

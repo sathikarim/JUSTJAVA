@@ -1,17 +1,31 @@
 package com.sathidov.justjava;
 
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
     int priceCapp;
     int total = 0;
     String message = "";
-
+    private Locale myLocale;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+        Intent i=this.getIntent();
        txtTotal = findViewById(R.id.txttotal);
         txtTotal.setText(NumberFormat.getCurrencyInstance().format(0));
        txtNumberCapp = findViewById(R.id.numbercapp);
@@ -46,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         cbVanilla = findViewById(R.id.CB_vanilla);
          name = findViewById(R.id.name);
         Intent data=getIntent();
-name.setText("hi : "+data.getStringExtra("nameacc"));
+name.setText(getString(R.string.hi)+data.getStringExtra("nameacc"));
         cbCocolate.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -265,5 +279,109 @@ name.setText("hi : "+data.getStringExtra("nameacc"));
 
 
         return message;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+
+
+            case R.id.chnglang:
+
+                final Dialog dialog1 = new Dialog(MainActivity.this);
+                dialog1.setContentView(R.layout.diloglang);
+              Button okthm = (Button) dialog1.findViewById(R.id.oklang);
+                Button nothm = (Button) dialog1.findViewById(R.id.backlang);
+                nothm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog1.dismiss();
+                    }
+                });
+                okthm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String lang = "en";
+                        RadioGroup radiolangGroup = (RadioGroup) dialog1.findViewById(R.id.radiolang);
+                        int selectedId = radiolangGroup.getCheckedRadioButtonId();
+                        switch (selectedId) {
+                           case R.id.lang_ar:
+                               lang = "ar";
+                                break;
+                            case R.id.lang_en:
+                                lang = "en";
+                                break;
+                        }
+
+                        changeLang(lang);
+
+                        dialog1.dismiss();}
+
+                });
+                dialog1.show();
+
+                return true;
+            case R.id.logout:
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+                builder1.setMessage(R.string.logoutjava);
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                Intent i=new Intent(MainActivity.this,login.class);
+                                startActivity(i);
+                                finish();
+                                dialog.cancel();
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        R.string.no,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    public void saveLocale(String lang)
+    {
+        String langPref = "Language";
+        SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(langPref, lang);
+        editor.commit();
+    }
+
+
+    public void changeLang(String lang)
+    {
+        if (lang.equalsIgnoreCase(""))
+            return;
+        if(lang.equals("ar")){        myLocale = new Locale(lang,"DZ");
+        }else{
+            myLocale = new Locale(lang);
+
+        }
+        saveLocale(lang);
+        Locale.setDefault(myLocale);
+        android.content.res.Configuration config = new android.content.res.Configuration();
+        config.locale = myLocale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 }

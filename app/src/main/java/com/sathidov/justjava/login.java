@@ -21,7 +21,10 @@ public class login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //add member sathi karim
-        whomember.add(new member("justjava@mail.com", "Sathi Karim", "2018"));
+        whomember.add(new member("sathi@mail.com", "sathi karim", "20182018"));
+        whomember.add(new member("sati@mail.com", "kk", "k"));
+
+
         //get info member from page singup
         Intent data=this.getIntent();
         String a=data.getStringExtra("test");
@@ -71,7 +74,7 @@ public class login extends AppCompatActivity {
         }
                  // if not found member go to page justjava
         if(t==0){
-            Toast.makeText(this, "OOOPS ...you wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.wrong, Toast.LENGTH_SHORT).show();
         }
 
     }

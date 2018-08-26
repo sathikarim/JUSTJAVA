@@ -35,14 +35,14 @@ String emailforgtxt;
                 String txt="";
                 txt+=memberforg.get(j).getUesrname();
                 txt+="\n";
-                txt+="PASSWORD : "+memberforg.get(j).getPasword();
+                txt+=getString(R.string.passjava)+memberforg.get(j).getPasword();
                 TextView txtcode=findViewById(R.id.txtcode);
                 txtcode.setText(txt);
                 t=1;
             }
         }
         if(t==0){
-            Toast.makeText(this, "OOOPS ...you not user...please singup", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.notuesr, Toast.LENGTH_SHORT).show();
         }
     }
 }

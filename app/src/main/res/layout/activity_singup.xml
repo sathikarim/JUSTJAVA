@@ -13,7 +13,7 @@
     android:layout_width="match_parent"
     android:layout_height="60dp"
     android:layout_marginTop="16dp"
-    android:hint="UESRNAME"
+    android:hint="@string/uesrname"
     android:maxLines="1"
     android:ems="10"
     android:textColorHint="@android:color/black" />
@@ -24,7 +24,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="EMAIL"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:textColorHint="@android:color/black" />
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
-        android:hint="PASSWORD"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:maxLines="1"
         android:ems="10"
@@ -46,7 +46,7 @@
         android:layout_marginTop="8dp"
         android:background="#FFD28F50"
         android:onClick="singup"
-        android:text="SINGUP" />
+        android:text="@string/singup" />
 
 
 

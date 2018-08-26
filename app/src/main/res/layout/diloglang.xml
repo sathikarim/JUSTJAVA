@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/txtdilog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/chese_your_lang"
+        android:textColor="@android:color/black"
+        android:textSize="22sp" />
+
+    <RadioGroup
+        android:layout_below="@id/txtdilog"
+        android:id="@+id/radiolang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/lang_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/arabic" />
+
+        <RadioButton
+            android:id="@+id/lang-en"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/english" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/oklang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radiolang"
+        android:layout_marginTop="8dp"
+        android:text="@string/ok" />
+    <Button
+        android:id="@+id/backlang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/radiolang"
+        android:layout_marginTop="8dp"
+        android:text="@string/back" />
+</RelativeLayout>

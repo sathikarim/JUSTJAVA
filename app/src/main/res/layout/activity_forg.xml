@@ -14,7 +14,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="ENTER YOUR EMAIL"
+        android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:textColorHint="@android:color/black" />
@@ -24,7 +24,7 @@
         android:layout_margin="32dp"
         android:onClick="enter"
         android:background="#FFA1514A"
-        android:text="ENTER" />
+        android:text="@string/enter" />
     <TextView
         android:id="@+id/txtcode"
         android:layout_width="match_parent"
